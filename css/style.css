@@ -703,7 +703,9 @@ a .wave::after {
   font-size: 2.2rem;
 }
 
-.book-a .container .grid input {
+.book-a .container .grid .book-number {
+  font-size: 2rem;
+  width: 40%;
   padding: 10px;
   border-radius: 1.1rem;
   border: 1.6px solid hsl(188, 100%, 69%);
