@@ -5,13 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>hotel</title>
     <!------add-logo------->
-    <link rel="icon" type="image/png" href="images/logo-2.png">
+    <link rel="icon" type="image/png" href="images/logo-Bkar.png">
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/all.min.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/owl.theme.default.min.css" />
     <link rel="stylesheet" href="css/owl.carousel.min.css" />
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
         <!----(كود الانميشن)----->
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link
@@ -45,17 +44,919 @@
 
 
 
-<!--------------------------------------------------------------->
+
     
   </head>
   <body>
 
-    <div class="soon">
+ 
 
-<h1>soooooon</h1>
 
+    <!----------------------------navbar-------------------------------------->
+    <header>
+      <div id="menu-bar" class="fa-solid fa-bars" onclick="showmenu()"></div>
+      <div class="logo">
+        <img src="images/logo-Bkar.png" alt="" />
+      </div>
+
+      <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#rooms">Our Rooms</a>
+
+        <a href="#services">services</a>
+        <a href="/wereToGo.html">Book now</a>
+        <a href="#packages">packages</a>
+        <a href="/contact.html">contact</a>
+      </nav>
+      <div class="icon">
+
+
+        <!------dark-light----------->
+        <div class="darklight-searchBox">
+          <div class="dark-light">
+            <i class="fa fa-moon moon"></i>
+            <i class="fa fa-sun sun"></i>
+          </div>
+        </div>
+
+        <ul>
+          <li>
+            <i onclick="showlogin()"><a href="/login.html">sgin in</a></i>
+          </li>
+          <li>
+            <i onclick="showlogin()"><a href="/register.html">sgin up</a></i>
+          </li>
+
+          <li>
+            <i
+              class="fa-solid fa-magnifying-glass"
+              onclick="searchbar()"
+              id="search-btn"
+            ></i>
+          </li>
+        </ul>
+      </div>
+
+      <form action="" class="search-form">
+        <input type="text" id="search-bar" placeholder="البحث فى الموقع" />
+        <label for="search-bar" class="fa-solid fa-magnifying-glass"></label>
+      </form>
+    </header>
+
+    <!---------------------------------- bootststrap ------------------------------------------------------------->
+
+    <section>
+      <div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button 
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./images/g-1.jpg" class="d-block w-100" alt="..." />
+            <div class="carousel-caption d-none d-md-block">
+              <h5 class=" fs-1 text-dark"> Welcome</h5>
+              <p class="fs-2 text-dark">
+                استمتع براحة المنزل فى وجهة رائعة
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="./images/Italy.jpg" class="d-block w-100" alt="..." />
+            <div class="carousel-caption d-none d-md-block">
+              <h5 class=" fs-1 "> Welcome</h5>
+              <p class="fs-2">
+                استمتع براحة المنزل فى وجهة رائعة
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="./images/Japan.jpg" class="d-block w-100" alt="..." />
+            <div class="carousel-caption d-none d-md-block">
+              <h5 class=" fs-1 "> Welcome</h5>
+              <p class="fs-2 ">
+                استمتع براحة المنزل فى وجهة رائعة
+              </p>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev"
+        >
+          <span class="boot-arrow-lf carousel-control-prev-icon w-100 " aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next"
+        >
+          <span class="boot-arrow-ri carousel-control-next-icon w-100" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+
+
+    
+    <!--------------------------------------------->
+    <!--------------------------------------------->
+
+
+    <section id="book-a" class="book-a">
+      <div class="container">
+        <div class="text">
+          <h1><span>Book</span> your rooms</h1>
+        </div>
+
+        <div class="form">
+          <form class="grid">
+            <input class="book-number"  type="date" placeholder="Araival Date" />
+            <input class="book-number"  type="date" placeholder="Departure date" />
+            <input class="book-number" type="number" placeholder="Adults " />
+            <input class="book-number"  type="number" placeholder="Childern" />
+            <input type="submit" placeholder="Check Availabliry" />
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!------------------------------->
+    <!------------------------------->
+
+    <div class="logos">
+      <div class="logos-slider">
+        <img src="./images/logos/bootstrap.png" alt="" />
+        <img src="./images/logos/c-.png" alt="" />
+        <img src="./images/logos/c-sharp (1).png" alt="" />
+        <img src="./images/logos/css-3.png" alt="" />
+        <img src="./images/logos/html-5.png" alt="" />
+        <img src="./images/logos/js.png" alt="" />
+        <img src="./images/logos/sql-server.png" alt="" />
+        <img src="./images/logos/structure.png" alt="" />
+        <img src="./images/logos/wordpress-logo.png" alt="" />
+      </div>
+
+      <script>
+        var copy = document.querySelector(".logos-slider").cloneNode(true);
+        document.querySelector(".logos").appendChild(copy);
+      </script>
     </div>
 
+    <!------------------------------->
+    <!------------------------------->
+
+    <!---------------start-abot top-------------------------->
+
+    <section class="about top" id="about">
+      <div class="min-text">
+        <h2>About us</h2>
+      </div>
+
+      <div class="container">
+        <div class="left">
+          <div class="heading-a">
+            <h1>welcome</h1>
+            <h2>crowny hotel</h2>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non eaque
+            accusamus possimus, corporis doloremque omnis quaerat! Voluptates
+            veritatis ullam rem ad placeat iusto velit eos at suscipit natus.
+            Magnam, sapiente?
+          </p>
+
+          <button class="button-about">About us</button>
+        </div>
+        <div class="right">
+          <img src="/images/reservation.1.jpg"  data-aos="fade-up" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <!----------------end-abot top------------------------->
+
+    <!------------------start-counter-------------------->
+    <section>
+      <div class="visits">
+        <div class="contener">
+          <div class="box">
+            <i class="fas fa-circle-user"></i>
+            <div class="number">2500</div>
+            <hr />
+            <p>Customer</p>
+          </div>
+
+          <div class="box">
+            <i class="fas fa-car"></i>
+            <div class="number">1500</div>
+            <hr />
+            <p>Happy Customer</p>
+          </div>
+
+          <div class="box">
+            <i class="fas fa-bolt"></i>
+            <div class="number">175</div>
+            <hr />
+            <p>Expert Technicians</p>
+          </div>
+
+          <div class="box">
+            <i class="fas fa-truck-fast"></i>
+            <div class="number">3550</div>
+            <hr />
+            <p>Desktop Reaired</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!------------------end-counter-------------------->
+
+    <!-------------start-rooms----------------------->
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"
+      integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <section class="rooms" id="rooms">
+      <div class="container top">
+        <div class="heading-b">
+          <h1>Expoler</h1>
+          <h2>Our Rooms</h2>
+        </div>
+        <p>
+          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+          officia deserunt
+        </p>
+        <div class="content mtop">
+          <div class="owl-carousel owl-carousel owl-theme">
+            <div class="items" data-aos="fade-right">
+              <div class="images">
+                <img src="./images/card-1.webp" />
+              </div>
+              <div class="text">
+                <h2>Suporior Rooms</h2>
+                <div class="rate flex">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptas?
+                </p>
+                <div class="button-about flex">
+                  <a href="./addToCard.html" class="ro-button">check now</a>
+                  <h3>
+                    $250
+                    <span
+                      ><br />
+                      per Night</span
+                    >
+                  </h3>
+                </div>
+              </div>
+            </div>
+
+            <div class="items" data-aos="slide-up" >
+              <div class="images">
+                <img src="./images/card-2.webp" />
+              </div>
+              <div class="text">
+                <h2>Suporior Rooms</h2>
+                <div class="rate flex">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptas?
+                </p>
+                <div class="button-about flex">
+                  <a href="./addToCard.html" class="ro-button">check now</a>
+                  <h3>
+                    $250
+                    <span
+                      ><br />
+                      per Night</span
+                    >
+                  </h3>
+                </div>
+              </div>
+            </div>
+
+            <div class="items" data-aos="fade-down">
+              <div class="images">
+                <img src="./images/card-3.webp" />
+              </div>
+              <div class="text">
+                <h2>Suporior Rooms</h2>
+                <div class="rate flex">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptas?
+                </p>
+                <div class="button-about flex">
+                  <a href="./addToCard.html" class="ro-button">check now</a>
+                  <h3>
+                    $250
+                    <span
+                      ><br />
+                      per Night</span
+                    >
+                  </h3>
+                </div>
+              </div>
+            </div>
+
+            <div class="items">
+              <div class="images">
+                <img src="./images/card-4.webp" />
+              </div>
+              <div class="text">
+                <h2>Suporior Rooms</h2>
+                <div class="rate flex">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptas?
+                </p>
+                <div class="button-about flex">
+                  <a href="./addToCard.html" class="ro-button">check now</a>
+                  <h3>
+                    $250
+                    <span
+                      ><br />
+                      per Night</span
+                    >
+                  </h3>
+                </div>
+              </div>
+            </div>
+
+            <div class="items">
+              <div class="images">
+                <img src="./images/card-5.webp" />
+              </div>
+              <div class="text">
+                <h2>Suporior Rooms</h2>
+                <div class="rate flex">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptas?
+                </p>
+                <div class="button-about flex">
+                  <a href="./addToCard.html" class="ro-button">check now</a>
+                  <h3>
+                    $250
+                    <span
+                      ><br />
+                      per Night</span
+                    >
+                  </h3>
+                </div>
+              </div>
+            </div>
+
+            <div class="items">
+              <div class="images">
+                <img src="./images/card-6.webp" />
+              </div>
+              <div class="text">
+                <h2>Suporior Rooms</h2>
+                <div class="rate flex">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptas?
+                </p>
+                <div class="button-about flex">
+                  <a href="./addToCard.html" class="ro-button">check now</a>
+                  <h3>
+                    $250
+                    <span
+                      ><br />
+                      per Night</span
+                    >
+                  </h3>
+                </div>
+              </div>
+            </div>
+
+            <div class="items">
+              <div class="images">
+                <img src="./images/card-7.webp" />
+              </div>
+              <div class="text">
+                <h2>Suporior Rooms</h2>
+                <div class="rate flex">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptas?
+                </p>
+                <div class="button-about flex">
+                  <a href="0./addToCard.html" class="ro-button">check now</a>
+                  <h3>
+                    $250
+                    <span
+                      ><br />
+                      per Night</span
+                    >
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      $(".owl-carousel").owlCarousel({
+        loop: true,
+        margin: 40,
+        nav: true,
+        dots: false,
+
+        navText: [
+          "<i class = 'fa fa-chevron-left' ></i>",
+          " <i class = 'fa fa-chevron-right'></i>",
+        ],
+        responsive: {
+          0: {
+            items: 1,
+          },
+          600: {
+            items: 2,
+            margin: 10,
+          },
+          1000: {
+            items: 3,
+          },
+        },
+      });
+    </script>
+
+    <!-------------end-rooms----------------------->
+
+    <!-------------start-services----------------------->
+    <!-------------start-services----------------------->
+
+    <section class="services top" id="services">
+      <div class="container">
+        <div class="heading-b">
+          <h1>SERVICES</h1>
+          <h2>Our services</h2>
+        </div>
+        <p>
+          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+          officia deserunt
+        </p>
+
+        <div class="content flex_space">
+          <div class="left grid2">
+            <div class="box" data-aos="flip-left">
+              <div class="text">
+                <i class="fa-solid fa-champagne-glasses"></i>
+                <h3>Delious food</h3>
+              </div>
+            </div>
+
+            <div class="box"  data-aos="flip-right">
+              <div class="text">
+                <i class="fa-solid fa-person-biking"></i>
+                <h3>Fintness</h3>
+              </div>
+            </div>
+
+            <div class="box"  data-aos="flip-left">
+              <div class="text">
+                <i class="fa-solid fa-utensils"></i>
+                <h3>Inhouse Reataurant</h3>
+              </div>
+            </div>
+
+            <div class="box"  data-aos="flip-right">
+              <div class="text">
+                <i class="fa-solid fa-spa"></i>
+                <h3>DBeaty spa</h3>
+              </div>
+            </div>
+          </div>
+          <div class="right">
+            <img src="/images/service.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-------------end-services----------------------->
+
+    <!---------------pacckages-------------------------------------------------->
+    <section class="pacckages" id="packages">
+      <div class="min-text" style="margin-top: 30px">
+        <h2>packages</h2>
+      </div>
+
+      <div class="container">
+        <div class="box"   data-aos="flip-right">
+          <img src="images/Korea.jpg" alt="" />
+
+          <div class="contact">
+            <h3><i class="fa-solid fa-location-dot"></i> korea</h3>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi.
+            </p>
+
+            <div class="star">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+
+            <div class="price">$50.00 <span>$60.00</span></div>
+            <a href="./addToCard.html" class="check-btn">check now</a>
+          </div>
+        </div>
+
+        <div class="box" data-aos="flip-down">
+          <img src="images/egypt.jpg" alt="" />
+
+          <div class="contact">
+            <h3><i class="fa-solid fa-location-dot"></i> egypt</h3>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi.
+            </p>
+
+            <div class="star">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+
+            <div class="price">$70.00 <span>$80.00</span></div>
+            <a href="/addToCard.html" class="check-btn">check now</a>
+          </div>
+        </div>
+
+        <div class="box" data-aos="flip-left">
+          <img src="images/Hawaii.jpg" alt="" />
+
+          <div class="contact">
+            <h3><i class="fa-solid fa-location-dot"></i>hawaii</h3>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi.
+            </p>
+
+            <div class="star">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+
+            <div class="price">$40.00 <span>$50.00</span></div>
+            <a href="/addToCard.html" class="check-btn">check now</a>
+          </div>
+        </div>
+
+        <div class="box" data-aos="flip-right">
+          <img src="images/Italy.jpg" alt="" />
+
+          <div class="contact">
+            <h3><i class="fa-solid fa-location-dot"></i> italy</h3>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi.
+            </p>
+
+            <div class="star">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+
+            <div class="price">$65.00 <span>$80.00</span></div>
+            <a href="/addToCard.html" class="check-btn">check now</a>
+          </div>
+        </div>
+
+        <div class="box" data-aos="flip-up">
+          <img src="images/Japan.jpg" alt="" />
+
+          <div class="contact">
+            <h3><i class="fa-solid fa-location-dot"></i> japan</h3>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi.
+            </p>
+
+            <div class="star">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+
+            <div class="price">$55.00 <span>$60.00</span></div>
+            <a href="/addToCard.html" class="check-btn">check now</a>
+          </div>
+        </div>
+
+        <div class="box" data-aos="flip-left">
+          <img src="images/India.jpg" alt="" />
+
+          <div class="contact">
+            <h3><i class="fa-solid fa-location-dot"></i> india</h3>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi.
+            </p>
+
+            <div class="star">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+
+            <div class="price">$30.00 <span>$35.00</span></div>
+            <a href="/addToCard.html" class="check-btn">check now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!---------------------------------------------------------->
+
+    <!----------------start-new-rooms--------------------------------->
+    <!----
+<section class="new top room">
+    <div class="container">
+        <div class="heading-a">
+            <h1>NEW</h1>
+            <h2>Our News</h2>
+            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
+        </div>
+        
+
+        <div class="content-new flex">
+            <div class="left grid2">
+                <div class="items">
+                    <div class="image">
+                        <img src="./images//g-5.jpg" alt="">
+                    </div>
+                    <div class="text">
+                        <h2>Finibus bonorum malorm.</h2>
+                        <div class="admin flex">
+                            <i class="fa fa-user"></i>
+                            <label>Admin</label>
+                            <i class="fa fa-heart"></i>
+                            <label>500</label>
+                            <i class="fa fa-comments"></i>
+            
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias necessitatibus tempora quasi modi perferendis hic!</p>
+                        
+                    </div>
+                </div>
+
+                <div class="items">
+                    <div class="image">
+                        <img src="./images//g-5.jpg" alt="">
+                    </div>
+                    <div class="text">
+                        <h2>Finibus bonorum malorm.</h2>
+                        <div class="admin flex">
+                            <i class="fa fa-user"></i>
+                            <label>Admin</label>
+                            <i class="fa fa-heart"></i>
+                            <label>500</label>
+                            <i class="fa fa-comments"></i>
+            
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias necessitatibus tempora quasi modi perferendis hic!</p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+       
+  
+        <p></p>
+    </div>
+</section>
+
+-->
+
+    <!-------------------------star-carousel--------------------------->
+    <section class="carousel" id="carousel">
+      <main class="app">
+        <div class="header">
+          <h1>🤩 ملاحظاتك</h1>
+        </div>
+        <div class="cards">
+          <div class="add card-style">
+            <div class="plus">
+              <i class="fa-solid fa-plus"></i>
+            </div>
+            <h4>أضف ملاحظة جديدة</h4>
+          </div>
+        </div>
+      </main>
+
+      <div class="popup-app">
+        <div class="popup">
+          <div class="header_popup">
+            <h4>أضف ملاحظة جديدة</h4>
+            <i class="bx bx-x close"></i>
+          </div>
+          <form action="#">
+            <div>
+              <label>العنوان</label>
+              <input id="in-put" type="text" />
+            </div>
+            <div>
+              <label>الوصف</label>
+              <textarea></textarea>
+            </div>
+            <button id="rev-button">اضافة</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!----------------------------end-carousel------------------------>
+
+    <!----------------------------star conect------------------------->
+
+    <section class="search">
+      <div class="search-text">
+        <p>subscribe our newsletter</p>
+
+        <div class="email">
+          <input type="text" id="UserName" placeholder="enter yor email" />
+
+          <button class="con-btn">
+            <span class="text">sign_up</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!----------------------------end-conect------------------------>
+
+    <!----------------end-new-rooms---------------------------------->
+
+    <!----------------------footer------------------------------->
+
+    <footer class="footer">
+      <div class="box-container">
+        <div class="box">
+          <h3>about Us</h3>
+          <img src="images/logo-Bkar.png" alt="" />
+          <p>i'm a front-End Developer and this is a website i created</p>
+          <div class="copyright">
+            <p>Designed By <span>Me</span></p>
+            <div>&copy; 2023 - <span>Abo Bakr Naser</span></div>
+          </div>
+        </div>
+
+        <div class="box">
+          <h3>barnch</h3>
+          <a href="#"> egept</a>
+          <a href="#"> london</a>
+          <a href="#">korea</a>
+          <a href="#">japan</a>
+        
+        </div>
+
+        <div class="box">
+           <a href="index.html">Home</a>
+
+                <a href="index.html">About Us</a>
+                <a href="index.html">Our Rooms</a>
+                <a href="index.html">services</a>
+                <a href="wereToGo.html">Book now</a>
+                <a href="index.html">packages</a>
+                <a href="contact.html">contact</a>
+        </div>
+
+        <div class="box">
+          <h3>follw Us</h3>
+          <div class="icon">
+            <a class="facebook" href="https://www.facebook.com/ail.fathi.5"
+              ><i class="fab fa-facebook"></i
+            ></a>
+            <a
+              class="email"
+              href="mailto:ailfathi24133268@gmail.com?subject=contact"
+              ><i class="fas fa-envelope"></i
+            ></a>
+           
+            <a class="whatsapp" href="https://wa.me/+2001024893886"
+              ><i class="fab fa-whatsapp"></i
+            ></a>
+
+             
+            <a class="linkedin" href="https://www.linkedin.com/in/abo-bakr-naser-ab18292a1/"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!------------------------------------------------------------------------>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/code.js"></script>
+
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 3000,
+        once: true,
+      });
+    </script>
 
 
   </body>
